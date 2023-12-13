@@ -2,8 +2,8 @@ import React from 'react';
 import Image from 'next/image';
 import Script from 'next/script';
 
-import congratulations from '../assets/congratulations.png';
-import {SDKUsageDemo} from '../components/SDKUsageDemo';
+import {CreateTeKapehuDiagram} from '../components/CreateDiagram';
+import {EditDiagram} from '../components/EditDiagram';
 import {MiroSDKInit} from '../components/SDKInit';
 
 export default function RootLayout({children}) {
@@ -18,13 +18,11 @@ export default function RootLayout({children}) {
         <div id="root">
           <div className="grid">
             <div className="cs1 ce12">
-              <Image src={congratulations} alt="" />
-              <h1>Congratulations!</h1>
-              <p>You've just created your first Miro app!</p>
-            </div>
+              <CreateTeKapehuDiagram />
+            </div> 
             <div className="cs1 ce12">
-              <SDKUsageDemo />
-            </div>
+              <EditDiagram />
+            </div>         
             <hr className="cs1 ce12" />
             <div className="cs1 ce12">{children}</div>
             <hr className="cs1 ce12" />
